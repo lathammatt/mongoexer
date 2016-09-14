@@ -35,6 +35,6 @@ db.restaurants.find({"borough": /Bronx/, "cuisine": "Pizza"}).sort({"grades.scor
 
 db.restaurants.find({borough: "Brooklyn", name: /^[A-Za-z][A-Za-z0-9]/}, {name: 1}).sort({"name": -1}).skip(20).limit(10)
 
-**italian or pizza places, reverse alpahbetical**
+**italian or pizza places, reverse alphabetical**
 
 db.restaurants.find({$or:[{"cuisine": "Pizza", "cuisine": "Italian"}]}).sort({"name": -1})
